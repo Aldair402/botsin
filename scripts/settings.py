@@ -1,6 +1,8 @@
 # set the bots maximum response length.
-max_tokens = 50
-
+max_tokens = 360
+tensor_split = "0.5,0.5"
+n_ctx = 8192
+gpu_layers = 0
 # the name of the json file that has the bot personality.
 bot_personality_file = "llamaBot.json"
 
