@@ -1,0 +1,43 @@
+# Este archivo ya deberías tenerlo, pero aquí está la estructura básica
+import subprocess
+import json
+from tinydb import TinyDB
+
+def get_llama_response(prompt, model_path, personality_file):
+    """Obtiene respuesta del modelo Llama."""
+    # Aquí va tu implementación de llamada al modelo
+    # Ejemplo con llama.cpp:
+    # command = f"./llama -m {model_path} -p '{prompt}'"
+    # response = subprocess.check_output(command, shell=True)
+    # return response.decode()
+    pass
+
+async def start_up(model_path):
+    """Inicializa el modelo."""
+    print(f"Iniciando modelo: {model_path}")
+    # Tu código de inicio
+
+def get_llama_models():
+    """Obtiene lista de modelos disponibles."""
+    # Tu código
+    pass
+
+def change_model(new_model):
+    """Cambia el modelo actual."""
+    # Tu código
+    pass
+
+def get_bot_personalities():
+    """Obtiene lista de personalidades disponibles."""
+    # Tu código
+    pass
+
+def set_bot_personality(personality):
+    """Cambia la personalidad del bot."""
+    # Tu código
+    pass
+
+def add_message(personality, message_data):
+    """Añade un mensaje al historial."""
+    db = TinyDB(f"./bot_memories/{personality}_history.json")
+    db.insert(message_data)
