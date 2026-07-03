@@ -1,6 +1,6 @@
 # set the bots maximum response length.
 max_tokens = 360
-tensor_split = "0.5,0.5"
+tensor_split = "3,1"
 n_ctx = 8192
 gpu_layers = 0
 # the name of the json file that has the bot personality.
