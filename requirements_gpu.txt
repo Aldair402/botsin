@@ -1,4 +1,4 @@
-discord.py
+discord.py-self
 openai==0.28.1
 python-dotenv
 tinydb
