@@ -55,7 +55,7 @@ def get_bot_personalities():
 
 async def start_up(current_model):
     # starts up the llama server.
-    command = f"python3 -m llama_cpp.server --model {current_model} --host 0.0.0.0 --port 8000 --n_gpu_layers {gpu_layers} --tensor-split {tensor_split}"
+    command = f"python3 -m llama_cpp.server --model {current_model} --host 0.0.0.0 --port 8000 --n_gpu_layers {gpu_layers} --tensor_split {tensor_split}"
     subprocess.Popen(command, shell=True)
 
 
@@ -64,7 +64,7 @@ def change_model(model):
     # kill the old llama server
     subprocess.run(['npx', 'kill-port', '8000'])          
     # start the llama server.
-    command = f"python3 -m llama_cpp.server --model {model} --host 0.0.0.0 --port 8000 --n_gpu_layers {gpu_layers} --tensor-split {tensor_split}"
+    command = f"python3 -m llama_cpp.server --model {model} --host 0.0.0.0 --port 8000 --n_gpu_layers {gpu_layers} --tensor_split {tensor_split}"
     subprocess.Popen(command, shell=True)   
 
 
